@@ -1,6 +1,6 @@
-@use './variables';
-@use 'sass:map';
-@use 'sass:math';
+@use "./variables";
+@use "sass:map";
+@use "sass:math";
 
 // Function for get colors and insert array colors
 @function color($color, $palette: variables.$colors) {

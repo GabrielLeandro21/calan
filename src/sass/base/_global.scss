@@ -1,11 +1,11 @@
-@use '../abstracts/functions' as functions;
-@use '../abstracts/typography';
+@use "../abstracts/functions" as functions;
+@use "../abstracts/typography";
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
 body {

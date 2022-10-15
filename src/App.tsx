@@ -1,8 +1,11 @@
-function App() {
+import React from 'react';
+import { Layout } from './layout';
+import { Home } from './pages/Home';
 
+export const App: React.FC = () => {
   return (
-    <>VITE PORRA</>
-  )
-}
-
-export default App
+    <Layout>
+      <Home />
+    </Layout>
+  );
+};

@@ -5,11 +5,11 @@
 // Variable Colors for map
 
 $colors: (
-  "primary": #12022F,
-  "secondary": #594D6D,
-  "tertiary": #E7E5EA,
+  "primary": #12022f,
+  "secondary": #594d6d,
+  "tertiary": #e7e5ea,
+  "white": #fff,
 );
-
 $fontWeight: (
   "regular": 400,
   "medium": 500,
@@ -17,7 +17,6 @@ $fontWeight: (
   "bold": 700,
   "extrabold": 800,
 );
-
 $breakpoints: (
   "sm": 375px,
   "md": 768px,
