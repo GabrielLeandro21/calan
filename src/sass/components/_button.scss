@@ -1,0 +1,32 @@
+@use '../abstracts/functions' as functions;
+@use '../abstracts/mixins' as mixins;
+
+.button {
+  @include mixins.flex(center, center);
+  background: functions.color('tertiary');
+  border: unset;
+  width: 100%;
+
+  @include mixins.breakpoint('md') {
+    width: max-content;
+  }
+
+  a {
+    color: functions.color('primary');
+    font-family: 'Satoshi', sans-serif;
+    font-size: 16px;
+    font-weight: functions.weight('regular');
+    line-height: 150%;
+    padding: functions.rem(16px) functions.rem(32px);
+    text-decoration: none;
+  }
+
+  &--dark {
+    background: functions.color('primary');
+    max-width: functions.rem(118px);
+
+    a {
+      color: functions.color('white');
+    }
+  }
+}
