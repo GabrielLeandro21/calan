@@ -1,11 +1,7 @@
+import '@stripe/stripe-js';
 import React from 'react';
-import { Layout } from './layout';
-import { Home } from './pages/Home';
 
+import Routes from './routes';
 export const App: React.FC = () => {
-  return (
-    <Layout>
-      <Home />
-    </Layout>
-  );
+  return <Routes />;
 };

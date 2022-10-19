@@ -1,7 +1,14 @@
-export type productsProps = {
-  products: Array<{
+export type ProductsProps = {
+  attributes: {
     price: string;
     title: string;
-    image: string;
-  }>;
+    image: {
+      data: {
+        attributes: {
+          url: string;
+        };
+      };
+    };
+    slug: string;
+  };
 };

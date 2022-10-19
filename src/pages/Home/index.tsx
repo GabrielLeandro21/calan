@@ -1,35 +1,14 @@
 import React from 'react';
-import Feature from '../../components/Home/Feature';
+import { loadStripe, Stripe } from '@stripe/stripe-js';
+
+import Button from '../../components/Button/Link';
+import Feature from '../../components/Feature';
+import Hero from '../../components/Home/Hero';
 import ProductsHighlighted from '../../components/Home/Products/Highlighted';
 import ProductsPopular from '../../components/Home/Products/Popular';
+import Panel from '../../components/Panel';
 import Subscribe from '../../components/Subscribe';
-
-const MookProducts = [
-  {
-    price: '$32.32',
-    title: 'The Dandy chair',
-    image:
-      'https://plus.unsplash.com/premium_photo-1664007755672-31c856f74ac3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
-  },
-  {
-    price: '$32.32',
-    title: 'Rustic Vase Set',
-    image:
-      'https://images.unsplash.com/photo-1556228578-8c89e6adf883?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
-  },
-  {
-    price: '$32.32',
-    title: 'The Silky Vase',
-    image:
-      'https://plus.unsplash.com/premium_photo-1664007755672-31c856f74ac3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
-  },
-  {
-    price: '$32.32',
-    title: 'The Lucy Lamp',
-    image:
-      'https://plus.unsplash.com/premium_photo-1664007755672-31c856f74ac3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
-  },
-];
+import { Layout } from '../../layout';
 
 const features = [
   {
@@ -56,13 +35,27 @@ const features = [
       'We use 100% recycled packaging to ensure our footprint is manageable',
   },
 ];
-export const Home: React.FC = () => {
+
+const Home: React.FC = () => {
   return (
-    <>
-      <Feature feature={features} />
-      <ProductsHighlighted products={MookProducts} />
-      <ProductsPopular products={MookProducts} />
+    <Layout>
+      <Hero />
+      <Feature feature={features} title="What makes our brand different" />
+      <ProductsHighlighted />
+      <ProductsPopular />
       <Subscribe />
-    </>
+      <Panel
+        image="https://images.unsplash.com/photo-1603204077809-d94bb1ea0fad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+        direction="right"
+        title="From a studio in London to a global brand with
+        over 400 outlets"
+        description="
+        When we started Avion, the idea was simple. Make high quality furniture affordable and available for the mass market. <br> <br> Handmade, and lovingly crafted furniture and homeware is what we live, breathe and design so our Chelsea boutique become the hotbed for the London interior design community.
+        "
+        actions={<Button title={'Get in touch'} href={'#'} />}
+      />
+    </Layout>
   );
 };
+
+export default Home;

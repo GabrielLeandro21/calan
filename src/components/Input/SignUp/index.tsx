@@ -9,11 +9,10 @@ const SignUp: React.FC = () => {
           className="signup__input"
           placeholder="your@email.com"
         />
-        
+
         <button className="button button--dark">
           <a
             href={'href'}
-            target="_blank"
             aria-label="Change to list page products"
             rel="noreferrer"
           >

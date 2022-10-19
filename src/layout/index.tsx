@@ -4,9 +4,7 @@ import Header from '../components/Header';
 
 import { LayoutProps } from '../types/layout';
 
-export const Layout: React.FC<{ children: JSX.Element }> = ({
-  children,
-}: LayoutProps) => {
+export const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
   return (
     <>
       <Header />

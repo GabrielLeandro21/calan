@@ -1,18 +1,43 @@
-import React from 'react';
-import { productsProps } from '../../../../types/products';
-import Button from '../../../Button';
+import React, { useEffect, useState } from 'react';
+import { getProducts } from '../../../../services/products.service';
+import { ProductsProps } from '../../../../types/products';
+import Button from '../../../Button/Link';
 import CardProducts from '../../../Card/Products';
 
-const ProductsPopular: React.FC<productsProps> = ({
-  products,
-}: productsProps) => {
-  const necessaryItems = products.slice(0, 3);
+const ProductsPopular: React.FC = () => {
+  const [principalsProduct, setPrincipalsProduct] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  const getPrincipalsProduct = async () => {
+    try {
+      setLoading(true);
+      const { data } = await getProducts();
+      setPrincipalsProduct(data);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    (async () => {
+      await getPrincipalsProduct();
+    })();
+  }, []);
+
+  const necessaryItems = principalsProduct.slice(0, 3);
+
   return (
     <section className="products">
       <h2 className="products__title">Our popular products</h2>
       <div className="products__wrapper products__wrapper--grid">
-        {necessaryItems.map(({ title, image, price }) => (
-          <CardProducts key={title} image={image} title={title} price={price} />
+        {necessaryItems.map(({ attributes }: ProductsProps) => (
+          <CardProducts
+            key={attributes.title}
+            image={attributes.image.data.attributes.url}
+            title={attributes.title}
+            price={attributes.price}
+            slug={attributes.slug}
+          />
         ))}
       </div>
 

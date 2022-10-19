@@ -34,6 +34,7 @@ const socials = [
     icons: 'footers',
   },
 ];
+
 const Footer: React.FC = () => {
   return (
     <footer className="footer">

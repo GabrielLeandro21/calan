@@ -1,8 +1,9 @@
-@use '../abstracts/functions' as functions;
-@use '../abstracts/mixins' as mixins;
+@use "../abstracts/functions" as functions;
+@use "../abstracts/mixins" as mixins;
 
 .products {
   @include mixins.flex(center, center);
+
   flex-direction: column;
   gap: functions.rem(40px);
   margin-inline: auto;
@@ -10,22 +11,23 @@
   padding-block: functions.rem(46px);
   padding-inline: functions.rem(25px);
 
-  @include mixins.breakpoint('md') {
+  @include mixins.breakpoint("md") {
     padding-block: functions.rem(80px);
   }
 
-  @include mixins.breakpoint('lg') {
-    padding-inline: functions.rem(0px);
+  @include mixins.breakpoint("lg") {
+    padding-inline: 0;
   }
 
   &__wrapper {
     display: grid;
-    gap: 16px;
+    gap: functions.rem(16px);
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
 
-    @include mixins.breakpoint('md') {
-      @include mixins.flex(center, space-between);
+    @include mixins.breakpoint("md") {
+      @include mixins.flex(flex-start, space-between);
+
       gap: functions.rem(20px);
     }
 
@@ -38,7 +40,7 @@
         max-width: 100%;
       }
 
-      @include mixins.breakpoint('md') {
+      @include mixins.breakpoint("md") {
         gap: functions.rem(20px);
         grid-template-columns: repeat(4, 1fr);
 
@@ -52,13 +54,14 @@
 
   &__title {
     @include mixins.flex(center, flex-start);
-    color: functions.color('primary');
+
+    color: functions.color("primary");
     font-size: functions.rem(20px);
-    font-weight: functions.weight('regular');
+    font-weight: functions.weight("thin");
     line-height: functions.rem(25px);
     width: 100%;
 
-    @include mixins.breakpoint('md') {
+    @include mixins.breakpoint("md") {
       font-size: functions.rem(32px);
       line-height: functions.rem(39px);
     }

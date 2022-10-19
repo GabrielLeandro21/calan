@@ -1,14 +1,15 @@
-@use '../abstracts/functions' as functions;
-@use '../abstracts/mixins' as mixins;
+@use "../abstracts/functions" as functions;
+@use "../abstracts/mixins" as mixins;
 
 .signup {
   &__wrapper {
     @include mixins.flex(center, center);
+
     gap: 0;
   }
 
   &__input {
-    background: functions.color('tertiary');
+    background: functions.color("tertiary");
     border: none;
     height: functions.rem(56px);
     max-width: functions.rem(354px);
