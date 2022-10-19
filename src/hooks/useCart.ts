@@ -1,10 +1,11 @@
 import create from 'zustand';
 import { persist } from 'zustand/middleware';
 import {
-  AddToCartProps,
+  AddToCartInitialProps,
   CartContentProps,
+  RemoveCartInitialProps,
   UpdateCartInitialStateProps,
-  UpdateCartProps,
+  UpdateInitialCartProps,
   useCartProps,
 } from '../types/context';
 
@@ -15,7 +16,7 @@ export const useCart = create(
       quantity: 0,
       cartContent: [],
 
-      addTocart: (params: AddToCartProps) => {
+      addTocart: (params: AddToCartInitialProps) => {
         set((state: UpdateCartInitialStateProps) => ({
           quantity: state.quantity + 1,
           total: state.total + parseFloat(params.price),
@@ -23,7 +24,10 @@ export const useCart = create(
         }));
       },
 
-      updateCart: (params: UpdateCartProps, getCart: CartContentProps) => {
+      updateCart: (
+        params: UpdateInitialCartProps,
+        getCart: CartContentProps
+      ) => {
         set((state: UpdateCartInitialStateProps) => ({
           quantity: state.quantity + 1,
           total: state.total + parseFloat(params.price),
@@ -31,7 +35,7 @@ export const useCart = create(
         }));
       },
 
-      removeFromCart: (params: useCartProps) =>
+      removeFromCart: (params: RemoveCartInitialProps) =>
         set((state: UpdateCartInitialStateProps) => ({
           total: state.total - params.price * params.quantity,
           quantity: state.quantity - params.quantity,

@@ -4,7 +4,7 @@ import { loadStripe, Stripe } from '@stripe/stripe-js';
 import { CheckoutButtonItemsProps } from '../../../types/button/checkout';
 import { checkoutOptionsProps } from '../../../types/checkout';
 import { REACT_APP_STRIPE_KEY } from '../../../../global/constants';
-import { useStripeProps } from '../../../types/context';
+import { useStripeProps } from '../../../types/stripe';
 
 let stripePromise: Promise<Stripe | null>;
 

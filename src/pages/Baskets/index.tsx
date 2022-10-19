@@ -4,7 +4,6 @@ import { NumericFormat } from 'react-number-format';
 import { Popover, Whisper, Button as ButtonPopover } from 'rsuite';
 import React, { useEffect, useState } from 'react';
 
-// import Button from '../../components/Button/Link';
 import { Layout } from '../../layout';
 import { ProductInCart, RemoveProductInCart } from '../../types/productInCart';
 import { REACT_APP_BASE_URL } from '../../../global/constants';
@@ -14,7 +13,6 @@ import Checkout from '../../components/Button/Checkout';
 import Dots from '../../assets/dots.svg';
 
 const Baskets: React.FC = () => {
-  const [quantity, setQuantity] = useState<number>(1);
   const [totalQuantity, setTotalQuantity] = useState<number>(1);
 
   const [disabled, setDisabled] = useState<boolean>(false);
@@ -43,7 +41,6 @@ const Baskets: React.FC = () => {
     }, 0);
 
     getProductsInCart.length <= 0 ? setDisabled(true) : setDisabled(false);
-    setQuantity(getProductsInCart);
     setTotalQuantity(getQuantityItems);
   }, [getProductsInCart]);
 

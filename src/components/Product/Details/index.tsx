@@ -13,12 +13,7 @@ import { NumericFormat } from 'react-number-format';
 import { REACT_APP_BASE_URL } from '../../../../global/constants';
 import ButtonAddToCart from '../../Button/AddToCart';
 import { useCart } from '../../../hooks/useCart';
-import {
-  AddToCartProps,
-  CartContentProps,
-  UpdateCartProps,
-  useCartProps,
-} from '../../../types/context';
+import { useCartProps } from '../../../types/context';
 import { ProductInCart } from '../../../types/productInCart';
 import { toast, ToastContainer } from 'react-toastify';
 import Select from 'react-select';

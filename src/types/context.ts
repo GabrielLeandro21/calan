@@ -1,8 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export type useCartProps = any;
-export type useStripeProps = any;
 
-export type AddToCartProps = {
+export type AddToCartInitialProps = {
   addTocart: any;
   slug: string;
   image: string;
@@ -13,7 +12,7 @@ export type AddToCartProps = {
   description: string;
 };
 
-export type UpdateCartProps = {
+export type UpdateInitialCartProps = {
   slug: string;
   image: string;
   price: string;
@@ -21,6 +20,12 @@ export type UpdateCartProps = {
   stripe: string;
   title: string;
   description: string;
+};
+
+export type RemoveCartInitialProps = {
+  quantity: number;
+  slug: string;
+  price: number;
 };
 
 export type UpdateCartInitialStateProps = {
