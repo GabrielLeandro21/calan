@@ -1,7 +1,7 @@
 @use '../abstracts/functions' as functions;
 @use '../abstracts/mixins' as mixins;
 
-.button {
+.c-button {
   @include mixins.flex(center, center);
 
   background: functions.color('tertiary');

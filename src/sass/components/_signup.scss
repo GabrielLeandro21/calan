@@ -1,7 +1,7 @@
 @use "../abstracts/functions" as functions;
 @use "../abstracts/mixins" as mixins;
 
-.signup {
+.c-signup {
   &__wrapper {
     @include mixins.flex(center, center);
 

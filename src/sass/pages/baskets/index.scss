@@ -133,7 +133,7 @@
       flex-direction: row;
     }
 
-    .button {
+    .c-button {
       @include mixins.breakpoint('md') {
         width: 100%;
       }

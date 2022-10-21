@@ -37,15 +37,15 @@ const socials = [
 
 const Footer: React.FC = () => {
   return (
-    <footer className="footer">
-      <section className="footer__container">
+    <footer className="c-footer">
+      <section className="c-footer__container">
         <div>
           <div>
-            <figure className="footer__logo">
+            <figure className="c-footer__logo">
               <img src={logo} alt="logo footer" />
             </figure>
 
-            <div className="footer__content">
+            <div className="c-footer__content">
               <p>21 New York Street</p>
               <p>New York City</p>
               <p>United States of America</p>
@@ -54,40 +54,40 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="footer__wrapper">
-          <nav className="footer__nav">
-            <h2 className="footer__title" aria-describedby="menu">
+        <div className="c-footer__wrapper">
+          <nav className="c-footer__nav">
+            <h2 className="c-footer__title" aria-describedby="menu">
               Menu
             </h2>
-            <ul className="footer__unlist" id="menu">
+            <ul className="c-footer__unlist" id="menu">
               {footers.map(({ title }) => (
-                <li key={title} className="footer__item">
+                <li key={title} className="c-footer__item">
                   <a href="">{title}</a>
                 </li>
               ))}
             </ul>
           </nav>
 
-          <nav className="footer__nav">
-            <h2 className="footer__title" aria-describedby="categories">
+          <nav className="c-footer__nav">
+            <h2 className="c-footer__title" aria-describedby="categories">
               Categories
             </h2>
-            <ul className="footer__unlist" id="categories">
+            <ul className="c-footer__unlist" id="categories">
               {footers.map(({ title }) => (
-                <li key={title} className="footer__item">
+                <li key={title} className="c-footer__item">
                   <a href="">{title}</a>
                 </li>
               ))}
             </ul>
           </nav>
 
-          <nav className="footer__nav">
-            <h2 className="footer__title" aria-describedby="ourCompany">
+          <nav className="c-footer__nav">
+            <h2 className="c-footer__title" aria-describedby="ourCompany">
               Our company
             </h2>
-            <ul className="footer__unlist" id="ourCompany">
+            <ul className="c-footer__unlist" id="ourCompany">
               {footers.map(({ title }) => (
-                <li key={title} className="footer__item">
+                <li key={title} className="c-footer__item">
                   <a href="">{title}</a>
                 </li>
               ))}
@@ -96,7 +96,7 @@ const Footer: React.FC = () => {
         </div>
       </section>
 
-      <section className="footer__credits">Copyright 2022 Avion LTD</section>
+      <section className="c-footer__credits">Copyright 2022 Avion LTD</section>
     </footer>
   );
 };

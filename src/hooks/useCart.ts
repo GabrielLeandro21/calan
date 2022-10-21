@@ -1,12 +1,12 @@
 import create from 'zustand';
 import { persist } from 'zustand/middleware';
+
 import {
   AddToCartInitialProps,
   CartContentProps,
   RemoveCartInitialProps,
   UpdateCartInitialStateProps,
   UpdateInitialCartProps,
-  useCartProps,
 } from '../types/context';
 
 export const useCart = create(

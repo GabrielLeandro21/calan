@@ -8,8 +8,9 @@ const ButtonLink: React.FC<buttonProps> = ({
   href,
   color,
 }: buttonProps) => {
+  console.log(title, href)
   return (
-    <button className={`button ${color ? `button--${color}` : ''}`}>
+    <button className={`c-button ${color ? `c-button--${color}` : ''}`}>
       <Link to={href} aria-label="Change to list page products">
         {title}
       </Link>

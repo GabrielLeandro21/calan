@@ -3,15 +3,17 @@ import SignUp from '../Input/SignUp';
 
 const Subscribe: React.FC = () => {
   return (
-    <section className="subscribe">
-      <section className="subscribe__wrapper">
-        <h2 className="subscribe__title">Join the club and get the benefits</h2>
-        <p className="subscribe__description">
+    <section className="c-subscribe">
+      <section className="c-subscribe__wrapper">
+        <h2 className="c-subscribe__title">
+          Join the club and get the benefits
+        </h2>
+        <p className="c-subscribe__description">
           Sign up for our newsletter and receive exclusive offers on new ranges,
           sales, pop up stores and more
         </p>
 
-        <div className="subscribe__button">
+        <div className="c-subscribe__button">
           <SignUp />
         </div>
       </section>

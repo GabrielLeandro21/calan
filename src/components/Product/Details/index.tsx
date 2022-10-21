@@ -16,21 +16,15 @@ import { useCart } from '../../../hooks/useCart';
 import { useCartProps } from '../../../types/context';
 import { ProductInCart } from '../../../types/productInCart';
 import { toast, ToastContainer } from 'react-toastify';
-import Select from 'react-select';
 
 const Details: React.FC = () => {
   const [details, setDetails] = useState<DetailsInitalStateProps>({
-    createdAt: '',
-    depth: '',
     description: '',
-    height: '',
     price: 0,
     publishedAt: '',
     slug: '',
     title: '',
     quantity: 1,
-    updatedAt: '',
-    width: '',
     image: {
       data: {
         attributes: {
@@ -118,22 +112,22 @@ const Details: React.FC = () => {
     (async () => {
       await getProductDetails();
     })();
-  }, []);
+  }, [slug]);
 
   return (
-    <section className="details">
+    <section className="c-details">
       <ToastContainer />
-      <div className="details__container">
-        <figure className="details__figure">
+      <div className="c-details__container">
+        <figure className="c-details__figure">
           <img
             src={`${REACT_APP_BASE_URL}${details.image.data.attributes.url}`}
             alt="product image"
           />
         </figure>
 
-        <section className="details__content">
-          <h1 className="details__title">{details.title}</h1>
-          <p className="details__price">
+        <section className="c-details__content">
+          <h1 className="c-details__title">{details.title}</h1>
+          <p className="c-details__price">
             <NumericFormat
               value={details.price.toFixed(2)}
               displayType={'text'}
@@ -143,8 +137,8 @@ const Details: React.FC = () => {
           </p>
 
           <div>
-            <h2 className="details__subtitle">Product description</h2>
-            <p className="details__description">{details.description}</p>
+            <h2 className="c-details__subtitle">Product description</h2>
+            <p className="c-details__description">{details.description}</p>
           </div>
 
           <NumberPicker
@@ -154,7 +148,7 @@ const Details: React.FC = () => {
             }}
           />
 
-          <div className="details__buttons">
+          <div className="c-details__buttons">
             <div
               onClick={() =>
                 handleCartProducts({
@@ -171,11 +165,7 @@ const Details: React.FC = () => {
               <ButtonAddToCart />
             </div>
 
-            <Button
-              title={'Save to favorites'}
-              href={'/baskets'}
-              color={'white'}
-            />
+            <Button title={'Go to Cart'} href={'/baskets'} color={'white'} />
           </div>
         </section>
       </div>

@@ -1,7 +1,7 @@
 @use "../abstracts/functions" as functions;
 @use "../abstracts/mixins" as mixins;
 
-.details {
+.c-details {
   background-color: functions.color("tertiary");
 
   &__container {

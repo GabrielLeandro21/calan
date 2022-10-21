@@ -2,7 +2,7 @@ import React from 'react';
 
 const ButtonAddToCart: React.FC = () => {
   return (
-    <button className="button button--dark">
+    <button className="c-button c-button--dark">
       <span>Add to cart</span>
     </button>
   );

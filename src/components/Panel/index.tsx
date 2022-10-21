@@ -9,19 +9,19 @@ const Panel: React.FC<PanelProps> = ({
   actions,
 }: PanelProps) => {
   return (
-    <section className={`panel panel--direction-${direction}`}>
-      <div className="panel__content">
+    <section className={`c-panel c-panel--direction-${direction}`}>
+      <div className="c-panel__content">
         <div>
-          <h2 className="panel__title">{title}</h2>
+          <h2 className="c-panel__title">{title}</h2>
           <p
-            className="panel__description"
+            className="c-panel__description"
             dangerouslySetInnerHTML={{ __html: description }}
           />
         </div>
 
         <div>{actions}</div>
       </div>
-      <figure className="panel__figure">
+      <figure className="c-panel__figure">
         <img src={image} alt="Panel Image" />
       </figure>
     </section>

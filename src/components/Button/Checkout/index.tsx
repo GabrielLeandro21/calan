@@ -50,8 +50,8 @@ const Checkout: React.FC<CheckoutButtonItemsProps> = (
 
   return (
     <button
-      className={`button button--dark ${
-        items.isDisabled ? 'button--disabled' : ''
+      className={`c-button c-button--dark ${
+        items.isDisabled ? 'c-button--disabled' : ''
       } `}
       type="button"
       onClick={redirectToCheckout}

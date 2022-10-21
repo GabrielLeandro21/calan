@@ -1,5 +1,4 @@
 import React from 'react';
-import { loadStripe, Stripe } from '@stripe/stripe-js';
 
 import Button from '../../components/Button/Link';
 import Feature from '../../components/Feature';
@@ -10,37 +9,11 @@ import Panel from '../../components/Panel';
 import Subscribe from '../../components/Subscribe';
 import { Layout } from '../../layout';
 
-const features = [
-  {
-    image: 'https://cdn-icons-png.flaticon.com/512/263/263142.png',
-    title: 'Next day as standard',
-    description: 'Order before 3pm and get your order the next day as standard',
-  },
-  {
-    image: 'https://cdn-icons-png.flaticon.com/512/263/263142.png',
-    title: 'Made by true artisans',
-    description:
-      'Handmade crafted goods made with real passion and craftmanship',
-  },
-  {
-    image: 'https://cdn-icons-png.flaticon.com/512/263/263142.png',
-    title: 'Unbeatable prices',
-    description:
-      'For our materials and quality you won’t find better prices anywhere',
-  },
-  {
-    image: 'https://cdn-icons-png.flaticon.com/512/263/263142.png',
-    title: 'Recycled packaging',
-    description:
-      'We use 100% recycled packaging to ensure our footprint is manageable',
-  },
-];
-
 const Home: React.FC = () => {
   return (
     <Layout>
       <Hero />
-      <Feature feature={features} title="What makes our brand different" />
+      {/* <Feature feature={features} title="What makes our brand different" /> */}
       <ProductsHighlighted />
       <ProductsPopular />
       <Subscribe />

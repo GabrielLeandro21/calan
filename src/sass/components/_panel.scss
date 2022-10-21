@@ -1,7 +1,7 @@
 @use "../abstracts/functions" as functions;
 @use "../abstracts/mixins" as mixins;
 
-.panel {
+.c-panel {
   @include mixins.flex(center, center);
 
   margin-inline: auto;

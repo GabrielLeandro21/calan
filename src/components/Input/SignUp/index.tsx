@@ -2,15 +2,15 @@ import React from 'react';
 
 const SignUp: React.FC = () => {
   return (
-    <label className="signup">
-      <section className="signup__wrapper">
+    <label className="c-signup">
+      <section className="c-signup__wrapper">
         <input
           type="text"
-          className="signup__input"
+          className="c-signup__input"
           placeholder="your@email.com"
         />
 
-        <button className="button button--dark">
+        <button className="c-button c-button--dark">
           <a
             href={'href'}
             aria-label="Change to list page products"

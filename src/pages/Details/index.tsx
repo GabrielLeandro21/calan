@@ -1,8 +1,6 @@
 import React from 'react';
 
-import Feature from '../../components/Feature';
 import ProductsPopular from '../../components/Home/Products/Popular';
-// import ProductsPopular from '../../components/Home/Products/Popular';
 import Panel from '../../components/Panel';
 import Details from '../../components/Product/Details';
 import SignUp from '../../components/Input/SignUp';

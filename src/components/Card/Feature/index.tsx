@@ -7,14 +7,14 @@ const CardFeature: React.FC<CardFeatureProps> = ({
   description,
 }: CardFeatureProps) => {
   return (
-    <section className="card card__feature">
-      <figure className="card__image">
+    <section className="c-card c-card__feature">
+      <figure className="c-card__image">
         <img src={image} alt={'image card'} />
       </figure>
 
       <section>
-        <h2 className="card__title">{title}</h2>
-        <p className="card__description">{description}</p>
+        <h2 className="c-card__title">{title}</h2>
+        <p className="c-card__description">{description}</p>
       </section>
     </section>
   );

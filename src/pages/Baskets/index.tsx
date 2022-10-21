@@ -36,15 +36,17 @@ const Baskets: React.FC = () => {
     });
 
   useEffect(() => {
-    const getQuantityItems = getProductsInCart.reduce((acc, obj) => {
-      return acc + obj.price * obj.quantity;
-    }, 0);
+    const getQuantityItems = getProductsInCart.reduce(
+      (acc: number, obj: { price: number; quantity: number }) => {
+        return acc + obj.price * obj.quantity;
+      },
+      0
+    );
 
     getProductsInCart.length <= 0 ? setDisabled(true) : setDisabled(false);
     setTotalQuantity(getQuantityItems);
   }, [getProductsInCart]);
 
-  console.log(getProductsInCart);
   return (
     <Layout>
       <section className="baskets">

@@ -1,7 +1,7 @@
 @use "../abstracts/functions" as functions;
 @use "../abstracts/mixins" as mixins;
 
-.header {
+.c-header {
   @include mixins.flex(center, space-between);
 
   max-width: functions.rem(1353px);

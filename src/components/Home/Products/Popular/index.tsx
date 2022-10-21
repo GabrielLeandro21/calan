@@ -27,9 +27,9 @@ const ProductsPopular: React.FC = () => {
   const necessaryItems = principalsProduct.slice(0, 3);
 
   return (
-    <section className="products">
-      <h2 className="products__title">Our popular products</h2>
-      <div className="products__wrapper products__wrapper--grid">
+    <section className="c-products">
+      <h2 className="c-products__title">Our popular products</h2>
+      <div className="c-products__wrapper c-products__wrapper--grid">
         {necessaryItems.map(({ attributes }: ProductsProps) => (
           <CardProducts
             key={attributes.title}
@@ -41,7 +41,7 @@ const ProductsPopular: React.FC = () => {
         ))}
       </div>
 
-      <Button title="View collection" href="#" />
+      <Button title="View collection" href="/products" />
     </section>
   );
 };

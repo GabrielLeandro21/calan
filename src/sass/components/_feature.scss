@@ -1,7 +1,7 @@
-@use "../abstracts/functions" as functions;
-@use "../abstracts/mixins" as mixins;
+@use '../abstracts/functions' as functions;
+@use '../abstracts/mixins' as mixins;
 
-.feature {
+.c-feature {
   @include mixins.flex(center, center);
 
   flex-direction: column;
@@ -12,13 +12,13 @@
 
   &__title {
     font-size: 20px;
-    font-weight: functions.weight("thin");
+    font-weight: functions.weight('thin');
     padding-block: functions.rem(40px);
     width: 100%;
 
     @include mixins.flex(center, flex-start);
 
-    @include mixins.breakpoint("md") {
+    @include mixins.breakpoint('md') {
       font-size: 24px;
       padding-block: functions.rem(50px);
 
@@ -33,12 +33,12 @@
     gap: functions.rem(40px);
     width: 100%;
 
-    @include mixins.breakpoint("md") {
+    @include mixins.breakpoint('md') {
       flex-direction: row;
       padding-block: functions.rem(60px) functions.rem(86px);
     }
 
-    @include mixins.breakpoint("lg") {
+    @include mixins.breakpoint('lg') {
       padding-inline: 0;
     }
   }

@@ -1,7 +1,7 @@
 @use "../abstracts/functions" as functions;
 @use "../abstracts/mixins" as mixins;
 
-.products {
+.c-products {
   @include mixins.flex(center, center);
 
   flex-direction: column;

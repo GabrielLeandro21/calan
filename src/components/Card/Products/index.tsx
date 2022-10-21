@@ -12,14 +12,14 @@ const CardProducts: React.FC<CardProductsProps> = ({
   slug,
 }: CardProductsProps) => {
   return (
-    <article className="card card__product">
-      <Link to={`product/${slug}`} className="card__wrapper">
-        <figure className="card__image">
+    <article className="c-card c-card__product">
+      <Link to={`/details/${slug}`} className="card__wrapper">
+        <figure className="c-card__image">
           <img src={`${REACT_APP_BASE_URL}${image}`} alt="Image card product" />
         </figure>
         <section>
-          <h2 className="card__title">{title}</h2>
-          <p className="card__price">
+          <h2 className="c-card__title">{title}</h2>
+          <p className="c-card__price">
             <NumericFormat
               value={price}
               displayType={'text'}

@@ -25,16 +25,11 @@ export type DetailsItemProps = {
 };
 
 export type DetailsInitalStateProps = {
-  createdAt: string;
-  depth: string;
   description: string;
-  height: string;
   price: number;
   publishedAt: string;
   slug: string;
   title: string;
-  updatedAt: string;
-  width: string;
   quantity: number;
   stripe: string;
   image: {

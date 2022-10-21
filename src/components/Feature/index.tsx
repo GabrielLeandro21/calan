@@ -4,9 +4,9 @@ import CardFeature from '../Card/Feature';
 
 const Feature: React.FC<featureProps> = ({ feature, title }: featureProps) => {
   return (
-    <section className="feature">
-      <h2 className="feature__title">{title}</h2>
-      <div className="feature__wrapper">
+    <section className="c-feature">
+      <h2 className="c-feature__title">{title}</h2>
+      <div className="c-feature__wrapper">
         {feature.map(({ title, description, image }) => (
           <CardFeature
             image={image}
