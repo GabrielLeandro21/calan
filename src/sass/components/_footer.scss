@@ -1,16 +1,16 @@
-@use '../abstracts/functions' as functions;
-@use '../abstracts/mixins' as mixins;
+@use "../abstracts/functions" as functions;
+@use "../abstracts/mixins" as mixins;
 
 .c-footer {
   @include mixins.flex(flex-start, space-between);
 
-  background-color: functions.color('primary');
+  background-color: functions.color("primary");
   padding-block: functions.rem(40px);
   padding-inline: functions.rem(25px);
   width: 100%;
   flex-direction: column;
 
-  @include mixins.breakpoint('md') {
+  @include mixins.breakpoint("md") {
     padding-block: functions.rem(40px);
     padding-inline: functions.rem(82px);
   }
@@ -24,7 +24,7 @@
     max-width: functions.rem(1280px);
     width: 100%;
 
-    @include mixins.breakpoint('lg') {
+    @include mixins.breakpoint("lg") {
       flex-direction: row;
     }
   }
@@ -35,11 +35,11 @@
     grid-template-columns: repeat(2, 1fr);
     justify-items: flex-start;
 
-    @include mixins.breakpoint('smx') {
+    @include mixins.breakpoint("smx") {
       grid-template-columns: repeat(3, 1fr);
     }
 
-    @include mixins.breakpoint('md') {
+    @include mixins.breakpoint("md") {
       @include mixins.flex(flex-start, center);
 
       gap: functions.rem(130px);
@@ -51,9 +51,9 @@
   }
 
   &__title {
-    color: functions.color('white');
+    color: functions.color("white");
     font-size: functions.rem(16px);
-    font-weight: functions.weight('thin');
+    font-weight: functions.weight("thin");
     line-height: functions.rem(20px);
     margin-bottom: functions.rem(14px);
   }
@@ -74,7 +74,7 @@
 
     a,
     p {
-      color: functions.color('white');
+      color: functions.color("white");
       font-size: functions.rem(14px);
       line-height: functions.rem(19px);
       text-decoration: none;
@@ -83,11 +83,11 @@
   }
 
   &__credits {
-    border-top: functions.rem(1px) solid functions.color('quinquenary');
-    color: functions.color('white');
+    border-top: functions.rem(1px) solid functions.color("quinquenary");
+    color: functions.color("white");
     font-family: Satoshi, sans-serif;
     font-size: functions.rem(14px);
-    font-weight: functions.weight('thin');
+    font-weight: functions.weight("thin");
     line-height: functions.rem(19px);
     margin-inline: auto;
     margin-top: functions.rem(36px);
@@ -96,7 +96,7 @@
     text-align: center;
     width: 100%;
 
-    @include mixins.breakpoint('md') {
+    @include mixins.breakpoint("md") {
       text-align: start;
     }
   }
